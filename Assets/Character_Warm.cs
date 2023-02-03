@@ -64,21 +64,25 @@ public class Character_Warm : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            StartCoroutine(Movement(forwardMoveDuration, transform.forward,forwardAnimationCurve,forwardforce));
+            StartCoroutine(Movement(forwardMoveDuration, transform.forward,forwardAnimationCurve,forwardforce,"WalkForward"));
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-            StartCoroutine(Movement(backwardMoveDuration, -transform.forward, backwardAnimationCurve,backwardforce));
+            StartCoroutine(Movement(backwardMoveDuration, -transform.forward, backwardAnimationCurve,backwardforce, "WalkBack"));
         }
     }
 
-    IEnumerator Movement(float moveDuration,Vector3 movementVector,AnimationCurve relevantAnimationCurve,float force)
+    IEnumerator Movement(float moveDuration,Vector3 movementVector,AnimationCurve relevantAnimationCurve,float force,string triggerString)
     {
         inputBlock = true;
 
         float startTime = Time.time;
         float t = 0;
+
+        
+        anim.SetTrigger(triggerString);
+        
 
         while (t < moveDuration)
         {
