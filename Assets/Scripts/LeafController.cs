@@ -29,8 +29,6 @@ public class LeafController : MonoBehaviour
     {
         if (!rb)
         rb = GetComponent<Rigidbody>();
-
-        //zrot = transform.eulerAngles.z;
     }
 
     // Update is called once per frame
@@ -41,7 +39,7 @@ public class LeafController : MonoBehaviour
         float sin = Mathf.Cos(Time.time * freq);
         //zrot = -sin * waveLength * 30f * Time.deltaTime;
 
-        _addedVel = sin * waveLength * Vector3.right;
+        _addedVel = sin * waveLength * transform.right;
 
         //if (Mathf.Sin(sin) > .88f)
         //    _addedVel += upMod * Vector3.up / sin;
@@ -56,6 +54,6 @@ public class LeafController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.AddForce(_addedVel);
-        rb.AddForce(x * Vector3.right);
+        rb.AddForce(x * transform.right);
     }
 }

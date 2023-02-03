@@ -9,6 +9,12 @@ public class SimpleFollowZ : MonoBehaviour
 
     public float smoothSpeed = 0.1f;
 
+    float offsetY = .32f;
+    [SerializeField]
+    float minOffsetY = .23f;
+    [SerializeField]
+    float maxOffsetY = .5f;
+
     private void Start()
     {
         // You can also specify your own offset from inspector
@@ -17,6 +23,14 @@ public class SimpleFollowZ : MonoBehaviour
         {
             offset = transform.position - target.position;
         }
+    }
+
+    private void Update()
+    {
+        offsetY += Input.GetAxis("Mouse Y") * Time.deltaTime;
+
+        offsetY = Mathf.Clamp(offsetY, minOffsetY, maxOffsetY);
+        offset.y = offsetY;
     }
 
     private void LateUpdate()

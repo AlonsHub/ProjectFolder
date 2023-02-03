@@ -45,6 +45,11 @@ public class Character_Warm : MonoBehaviour
 
     bool inputBlock = false;
 
+    private void Awake()
+    {
+        characterController.enabled = true;
+    }
+
     private void Update()
     {
         GroundAngle();
@@ -82,7 +87,7 @@ public class Character_Warm : MonoBehaviour
             float cureveEvaluation = relevantAnimationCurve.Evaluate(t / moveDuration);
  
             Vector3 frameMovement = movementVector * (force * cureveEvaluation);
-
+            Debug.Log(frameMovement.ToString());
             characterController.Move(frameMovement);
 
             yield return new WaitForFixedUpdate();
