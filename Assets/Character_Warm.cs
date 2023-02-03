@@ -47,8 +47,10 @@ public class Character_Warm : MonoBehaviour
 
     private void Update()
     {
-        //if (!GroundCheck())
-        //    return;
+        GroundAngle();
+
+        if (!GroundCheck())
+            return;
 
         if (inputBlock)
             return;
@@ -91,18 +93,45 @@ public class Character_Warm : MonoBehaviour
 
     bool GroundCheck()
     {
-        bool value = Physics.Raycast(transform.position, -transform.up, 0.01f, groundLayermask);
+        bool value = Physics.Raycast(transform.position, -transform.up , 1.1f, groundLayermask);
         Debug.Log(value);
 
         if (!value)
         {
-            characterController.Move(-transform.up);
+            characterController.Move(-transform.up * gravity * Time.fixedDeltaTime);
             Debug.Log(-transform.up);
             Debug.Log(gravity);
             Debug.Log(-transform.up);
         }
 
+        
+
         return value;
+    }
+
+    void GroundAngle()
+    {
+
+        Vector3 point1, point2;
+
+        RaycastHit hit;
+
+        Physics.Raycast(transform.position + transform.forward * 0.5f + Vector3.up, -transform.up, out hit, 4f, groundLayermask);
+        Debug.Log(hit.transform);
+        point1 = hit.point;
+
+        Debug.Log(point1);
+        Physics.Raycast(transform.position -transform.forward * 0.5f + Vector3.up, -transform.up, out hit, 4f, groundLayermask);
+
+        Debug.Log(hit.transform);
+        point2 = hit.point;
+        Debug.Log(point2);
+
+        Vector3 angleVector = point2 - point1;
+
+        transform.LookAt(transform.position - angleVector * 5);
+
+        Debug.Log(angleVector);
     }
 
 }
