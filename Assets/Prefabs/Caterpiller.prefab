@@ -53,7 +53,7 @@ MonoBehaviour:
   anim: {fileID: 6319856166374191126}
   gravity: 0.1
   forwardforce: 0.005
-  forwardMoveDuration: 2
+  forwardMoveDuration: 4
   forwardAnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -67,13 +67,49 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 2
-      outSlope: 2
+      time: 0.3041668
+      value: 0.000010543026
+      inSlope: 0.000023601995
+      outSlope: 0.000023601995
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.35416514
+      value: -0.042530283
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5673522
+      value: 0.9939194
+      inSlope: 0.011108391
+      outSlope: 0.011108391
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.4351055
+    - serializedVersion: 3
+      time: 0.6591336
+      value: 0
+      inSlope: -0.025511028
+      outSlope: -0.025511028
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 1
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.15543026
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -149,13 +185,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c98a44c50973e04091e9b3def467f6c,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1c98a44c50973e04091e9b3def467f6c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1c98a44c50973e04091e9b3def467f6c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1c98a44c50973e04091e9b3def467f6c,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c98a44c50973e04091e9b3def467f6c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.041
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c98a44c50973e04091e9b3def467f6c,
         type: 3}
