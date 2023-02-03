@@ -7,8 +7,8 @@ public class LeafKillBox : MonoBehaviour
  
     private void OnTriggerStay(Collider collision)
     {
-        LeafController lc = collision.GetComponent<LeafController>();
+        LeafController lc = collision.GetComponentInParent<LeafController>();
 
-
+        lc.enabled = false;
     }
 }
