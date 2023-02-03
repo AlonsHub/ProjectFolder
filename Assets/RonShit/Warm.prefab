@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &422766981912046467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2960455941436540792}
+  m_Layer: 0
+  m_Name: CamHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2960455941436540792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422766981912046467}
+  m_LocalRotation: {x: 0.17475265, y: 0.000000059604645, z: -0.000000018626451, w: 0.98461246}
+  m_LocalPosition: {x: 0, y: 2.4299996, z: -1.4530036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4241458994790858834}
+  m_Father: {fileID: 4241458994784822649}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 20.129002, y: 0, z: 0}
 --- !u!1 &4241458994784822652
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,7 +63,7 @@ Transform:
   m_LocalPosition: {x: 171.012, y: -9.24, z: 296.21}
   m_LocalScale: {x: 2, y: 2, z: 4.18}
   m_Children:
-  - {fileID: 4241458994790858834}
+  - {fileID: 2960455941436540792}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 3.301, y: 180, z: 0.001}
@@ -210,13 +241,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4241458994790858837}
-  m_LocalRotation: {x: 0.17475264, y: 0.000000059604638, z: -0.00000001862645, w: 0.9846124}
-  m_LocalPosition: {x: -0.000005191192, y: 2.43, z: -1.4530001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4241458994784822649}
+  m_Father: {fileID: 2960455941436540792}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 20.129002, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &4241458994790858833
 Camera:
   m_ObjectHideFlags: 0
