@@ -3,7 +3,12 @@ guid: f508cf1d056af5f46a7a24baa0acea53
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf_Mat
+    second: {fileID: 2100000, guid: eb957d69657d256478b9fce08e9f018e, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
