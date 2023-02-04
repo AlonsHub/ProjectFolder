@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3110422203418227357}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 372.2, y: 3.8138657, z: -296.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children:
   - {fileID: 95859166793853548}
   m_Father: {fileID: 0}
@@ -51,8 +51,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   anim: {fileID: 6319856166374191126}
-  gravity: 0.1
-  forwardforce: 0.005
+  gravity: 3
+  forwardforce: 0.5
   forwardMoveDuration: 4
   forwardAnimationCurve:
     serializedVersion: 2
@@ -114,7 +114,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  backwardforce: 0.003
+  backwardforce: 0.3
   backwardMoveDuration: 1.2
   backwardAnimationCurve:
     serializedVersion: 2
@@ -140,6 +140,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  groundCheckHeight: 2.3
 --- !u!65 &3110422203418227345
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -151,8 +152,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0809021, y: 0.091897964, z: 0.33288574}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.0809021, y: 0.085598946, z: 0.33288574}
+  m_Center: {x: 0, y: 0.0031495094, z: 0}
 --- !u!143 &3110422203418227359
 CharacterController:
   m_ObjectHideFlags: 0
@@ -168,7 +169,7 @@ CharacterController:
   m_Radius: 0.1
   m_SlopeLimit: 45
   m_StepOffset: 0.000001
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.06, z: 0}
 --- !u!1001 &494892498641685895
@@ -186,17 +187,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1c98a44c50973e04091e9b3def467f6c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c98a44c50973e04091e9b3def467f6c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c98a44c50973e04091e9b3def467f6c,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c98a44c50973e04091e9b3def467f6c,
         type: 3}
