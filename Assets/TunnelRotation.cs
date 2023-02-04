@@ -36,6 +36,9 @@ public class TunnelRotation : MonoBehaviour
     Animator whiteScreenAnim;
 
     [SerializeField]
+    Animator lsdTunnelEnd;
+
+    [SerializeField]
     Transform lsdestinationCamHolder;
     bool inputBlock = false;
 
