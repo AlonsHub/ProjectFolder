@@ -13,13 +13,15 @@ public class EaterChicken : MonoBehaviour
     LayerMask groundLayermask;
     NavMeshAgent agent;
 
+    Animator anim;
 
 
     private void Start()
     {
         if (!agent)
             agent = GetComponent<NavMeshAgent>();
-
+        if (!anim)
+            anim = GetComponent<Animator>();
     }
 
     public void WakeChicken()
@@ -57,7 +59,7 @@ public class EaterChicken : MonoBehaviour
     void Update()
     {
         GroundAngle();
-
+        anim.SetBool("Walk", agent.velocity.magnitude > 0.1f);
     }
 
     void GroundAngle()
