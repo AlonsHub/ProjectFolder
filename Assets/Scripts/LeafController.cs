@@ -19,7 +19,7 @@ public class LeafController : MonoBehaviour
     float x;
     Vector3 _addedVel;
     float zrot;
-    Rigidbody rb;
+    public Rigidbody rb;
     bool go;
     [SerializeField]
     Transform lookAtMe;

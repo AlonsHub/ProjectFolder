@@ -14,8 +14,10 @@ public class LeafKillBox : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         LeafController lc = collision.GetComponentInParent<LeafController>();
-
+        if (!lc)
+            return;
         lc.enabled = false;
+        lc.rb.isKinematic = true;
 
         //call caterpiller
         waker.WakeCaterpiller();

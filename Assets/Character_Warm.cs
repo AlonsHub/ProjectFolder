@@ -82,7 +82,7 @@ public class Character_Warm : MonoBehaviour
 
         
         anim.SetTrigger(triggerString);
-        
+        Debug.LogError("MOVE");
 
         while (t < moveDuration)
         {
@@ -99,12 +99,13 @@ public class Character_Warm : MonoBehaviour
 
         inputBlock = false;
     }
-
+    [SerializeField]
+    float groundCheckHeight;
     bool GroundCheck()
     {
-        bool value = Physics.Raycast(transform.position, -transform.up , 1.1f, groundLayermask);
+        bool value = Physics.Raycast(transform.position, -transform.up , groundCheckHeight, groundLayermask);
         Debug.Log(value);
-
+        
         if (!value)
         {
             characterController.Move(-transform.up * gravity * Time.fixedDeltaTime);
@@ -125,12 +126,12 @@ public class Character_Warm : MonoBehaviour
 
         RaycastHit hit;
 
-        Physics.Raycast(transform.position + transform.forward * 0.5f + Vector3.up, -transform.up, out hit, 4f, groundLayermask);
+        Physics.Raycast(transform.position + transform.forward * 1f + Vector3.up, -transform.up, out hit, 25.01f, groundLayermask);
         Debug.Log(hit.transform);
         point1 = hit.point;
 
         Debug.Log(point1);
-        Physics.Raycast(transform.position -transform.forward * 0.5f + Vector3.up, -transform.up, out hit, 4f, groundLayermask);
+        Physics.Raycast(transform.position -transform.forward * 1f + Vector3.up, -transform.up, out hit, 25.01f, groundLayermask);
 
         Debug.Log(hit.transform);
         point2 = hit.point;
