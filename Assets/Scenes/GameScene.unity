@@ -73863,12 +73863,17 @@ PrefabInstance:
     - target: {fileID: 4882453805369122255, guid: 8b98aa5c6cbd9e844a466eb99ef46547,
         type: 3}
       propertyPath: jumpHeight
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4882453805369122255, guid: 8b98aa5c6cbd9e844a466eb99ef46547,
         type: 3}
       propertyPath: playerSpeed
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882453805369122255, guid: 8b98aa5c6cbd9e844a466eb99ef46547,
+        type: 3}
+      propertyPath: gravityValue
+      value: -19.62
       objectReference: {fileID: 0}
     - target: {fileID: 4921111282627251132, guid: 8b98aa5c6cbd9e844a466eb99ef46547,
         type: 3}
