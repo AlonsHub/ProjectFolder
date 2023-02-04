@@ -8,6 +8,7 @@ public class SimpleFollowZ : MonoBehaviour
     public Vector3 offset;
 
     public float smoothSpeed = 0.1f;
+    public float camRotSpeed;
 
     float offsetY = .32f;
     [SerializeField]
@@ -27,7 +28,7 @@ public class SimpleFollowZ : MonoBehaviour
 
     private void Update()
     {
-        offsetY += Input.GetAxis("Mouse Y") * Time.deltaTime;
+        offsetY += Input.GetAxis("Mouse Y")* camRotSpeed * Time.deltaTime;
 
         offsetY = Mathf.Clamp(offsetY, minOffsetY, maxOffsetY);
         offset.y = offsetY;

@@ -13,6 +13,8 @@ public class EaterChicken : MonoBehaviour
     LayerMask groundLayermask;
     NavMeshAgent agent;
 
+
+
     private void Start()
     {
         if (!agent)
