@@ -15,7 +15,7 @@ public class CallHuman : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Chicken"))
+        if(ac && other.CompareTag("Chicken"))
         {
             ac.WakeUp();
         }

@@ -7,7 +7,7 @@ public class WallPainter : MonoBehaviour
     [SerializeField]
     Renderer rend;
     [SerializeField]
-    float totalTime;
+    float totalTime = 2.5f;
 
     //void Start()
     //{
@@ -16,8 +16,12 @@ public class WallPainter : MonoBehaviour
     [SerializeField]
     Animator anim;
 
+    [SerializeField]
+    GameObject dude;
+
     public void StartShiftToOne()
     {
+        dude.SetActive(false);
         anim.SetTrigger("END");
         //StartCoroutine(nameof(GradualDraw));
     }
@@ -30,7 +34,7 @@ public class WallPainter : MonoBehaviour
             t += Time.deltaTime;
             
 
-            rend.material.SetFloat("Vector1", -(t));
+            rend.material.SetFloat("Vector1", -(t/totalTime));
             yield return null;
         }
     }
