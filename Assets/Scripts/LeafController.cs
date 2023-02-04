@@ -37,23 +37,24 @@ public class LeafController : MonoBehaviour
         #region Rot and Added Vel calc
 
         float sin = Mathf.Cos(Time.time * freq);
-        //zrot = -sin * waveLength * 30f * Time.deltaTime;
 
-        _addedVel = sin * waveLength * transform.right;
-
+        _addedVel = sin * waveLength * Vector3.forward;
+        
+        zrot = -sin * waveLength * 10f * Time.deltaTime;
+        transform.rotation =Quaternion.Euler( new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, zrot));
         //if (Mathf.Sin(sin) > .88f)
         //    _addedVel += upMod * Vector3.up / sin;
 
         #endregion
 
-         x = Input.GetAxis("Horizontal")* moveSpeed;
+         x = -Input.GetAxis("Horizontal")* moveSpeed;
 
-        leaf.LookAt(lookAtMe);
+        //leaf.LookAt(lookAtMe);
     }
 
     private void FixedUpdate()
     {
         rb.AddForce(_addedVel);
-        rb.AddForce(x * transform.right);
+        rb.AddForce(x * Vector3.forward);
     }
 }
