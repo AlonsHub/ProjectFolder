@@ -40,7 +40,7 @@ public class LeafController : MonoBehaviour
 
         _addedVel = sin * waveLength * Vector3.forward;
         
-        zrot = -sin * waveLength * 10f * Time.deltaTime;
+        zrot = -sin * waveLength  * Time.deltaTime;
         transform.rotation =Quaternion.Euler( new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, zrot));
         //if (Mathf.Sin(sin) > .88f)
         //    _addedVel += upMod * Vector3.up / sin;
