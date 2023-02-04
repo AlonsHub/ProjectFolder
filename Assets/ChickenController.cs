@@ -15,6 +15,14 @@ public class ChickenController : MonoBehaviour
     [SerializeField]
     private float gravityValue = -9.81f;
 
+
+    [SerializeField]
+    private float maxAirTime= 3f;
+    [SerializeField]
+    private float currentAirTime= 0;
+
+    bool canAir = true;
+
     Animator anim;
     [SerializeField]
     private float groundCheckHeight;
@@ -38,7 +46,7 @@ public class ChickenController : MonoBehaviour
         //    playerVelocity.y = 0f;
         //}
         
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 move = new Vector3(-Input.GetAxis("Horizontal"), 0, -Input.GetAxis("Vertical"));
         controller.Move(move * Time.deltaTime * playerSpeed);
        
             anim.SetBool("Walk", move.magnitude > 0f);
@@ -60,12 +68,9 @@ public class ChickenController : MonoBehaviour
             }
             else if(playerVelocity.y < 0)
             {
-                if (!isFlapping)
-                {
-                    isFlapping = true;
-                    anim.SetBool("Flap", true);
-                }
-                drag = 10f;
+                //currentAirTime += Time.deltaTime;
+                drag = 3f;
+                
             }
         }
 
@@ -84,6 +89,14 @@ public class ChickenController : MonoBehaviour
         //}
 
         controller.Move(playerVelocity * Time.deltaTime);
+    }
+
+    IEnumerator CoolDownAir()
+    {
+        canAir = false;
+        anim.SetBool("InAir", false);
+        yield return new WaitForSeconds(maxAirTime);
+        canAir = true;
     }
 
     bool GroundCheck()
