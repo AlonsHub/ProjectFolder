@@ -36,7 +36,17 @@ public class EaterChicken : MonoBehaviour
 
             agent.SetDestination(target.position);
 
+
             yield return new WaitForSeconds(.3f);
+            if(agent.remainingDistance < agent.stoppingDistance)
+            {
+                agent.isStopped = true;
+                agent.velocity = Vector3.zero;
+            }
+            else
+            {
+                agent.isStopped = false;
+            }
         }
     }
 
