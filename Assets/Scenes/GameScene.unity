@@ -668,7 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63865ac756a32c4e957eaf3338a7ab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waker: {fileID: 0}
+  waker: {fileID: 1184519943}
 --- !u!1001 &536861777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -870,6 +870,7 @@ MonoBehaviour:
   whiteScreen: {fileID: 544162031}
   fadeOutStateString: WhteScreenFadeOut
   whiteScreenAnim: {fileID: 544162036}
+  lsdTunnelEnd: {fileID: 0}
   lsdestinationCamHolder: {fileID: 0}
 --- !u!4 &624145097
 Transform:
@@ -1259,7 +1260,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.6
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -6983,6 +6984,7 @@ MonoBehaviour:
   whiteScreen: {fileID: 0}
   fadeOutStateString: 
   whiteScreenAnim: {fileID: 544162036}
+  lsdTunnelEnd: {fileID: 0}
   lsdestinationCamHolder: {fileID: 0}
 --- !u!1001 &1970020233
 PrefabInstance:
@@ -7104,7 +7106,7 @@ PrefabInstance:
     - target: {fileID: 4230377138637735374, guid: 4096c27160507c845b2714dfdb192317,
         type: 3}
       propertyPath: m_Constraints
-      value: 48
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4096c27160507c845b2714dfdb192317, type: 3}
