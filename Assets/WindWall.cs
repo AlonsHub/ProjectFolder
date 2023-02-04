@@ -8,7 +8,7 @@ public class WindWall : MonoBehaviour
     float windforce;
     private void OnTriggerStay(Collider collision)
     {
-        collision.GetComponent<Rigidbody>().AddForce(transform.up * windforce);
+        collision.GetComponentInParent<Rigidbody>().AddForce(transform.up * windforce);
     }
     
 }

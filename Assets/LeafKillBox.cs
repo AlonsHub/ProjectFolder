@@ -6,7 +6,10 @@ public class LeafKillBox : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject caterpiller;
+    CataWaker waker;
+    //GameObject caterpiller;
+
+
  
     private void OnTriggerEnter(Collider collision)
     {
@@ -15,7 +18,7 @@ public class LeafKillBox : MonoBehaviour
         lc.enabled = false;
 
         //call caterpiller
-
+        waker.WakeCaterpiller();
 
     }
 }
