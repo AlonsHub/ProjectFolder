@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 621124d1704ee9f48bf19ec5dfd13604
+guid: a5b7b129429320c40aedff2ded3b91e9
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tree_Bark_Mat.001
+    second: {fileID: 2100000, guid: 4b265483b9da27846b6c6ef5eb8d2536, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -34,7 +39,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
